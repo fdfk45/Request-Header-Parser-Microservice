@@ -1,20 +1,14 @@
-# TIMESTAMP MICROSERVICE
+# Request Header Parser Microservice
 
-### User Stories
+### User Story
 
-- You can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: June 12, 2016)
-
-- If it does, it returns both the Unix timestamp and the natural language form of that date.
-
-- If it does not contain a date or Unix timestamp, it returns null for those properties.
+- Get user IP address, language and operating system for the browser the user is using.
 
 ## Example Usage:
 
-https://powerful-lowlands-26852.herokuapp.com/june%2012%202016
-
-https://powerful-lowlands-26852.herokuapp.com/1465689600
+https://obscure-fortress-17509.herokuapp.com/whoami
 
 ## Example Output
 
-{"unix":1465689600,"natural":"June 12th, 2016"}
+{"ipaddress":"5.152.221.83","language":"en-US","software":"Windows NT 6.1; WOW64"
 
