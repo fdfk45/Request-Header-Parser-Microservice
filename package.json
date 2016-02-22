@@ -1,0 +1,28 @@
+{
+  "name": "request-header-parser-microservice",
+  "version": "0.0.1",
+  "description": "Get user ip address, language and it operating system",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.13.1",
+    "ip": "^1.1.0"
+  },
+  "engines": {
+    "node": "0.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ckm100/Request-Header-Parser-Microservice"
+  },
+  "author": "Mawuli Kufogbe",
+  "keywords": [
+    "node",
+    "heroku",
+    "express",
+    "ip"
+  ],
+  "license": "MIT"
+}
