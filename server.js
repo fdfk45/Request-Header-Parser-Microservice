@@ -13,7 +13,15 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/whoami", function (req, res) {
 
-    realip = req.headers['x-forwarded-for'].split(',');
+    if (req.headers['x-forwarded-for']) {
+
+        realip = req.headers['x-forwarded-for'].split(',')[req.headers['x-forwarded-for'].split(',').length - 1];
+
+    } else {
+
+        realip = req.connection.remoteAddress;
+
+    }
 
     lan = req.headers["accept-language"].split(",")[0];
 
@@ -21,7 +29,7 @@ app.get("/whoami", function (req, res) {
 
     res.json({
 
-        "ipaddress": realip[realip.length - 1],
+        "ipaddress": realip,
         "language": lan,
         "software": soft.substring(1, soft.length)
     });
