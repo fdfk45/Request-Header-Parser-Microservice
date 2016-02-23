@@ -18,7 +18,7 @@ app.get("/whoami", function (req, res) {
 
     res.json({
 
-        "ipaddress": ip.address(),
+        "ipaddress": req.ip,
         "language": lan,
         "software": soft.substring(1, soft.length)
     });
