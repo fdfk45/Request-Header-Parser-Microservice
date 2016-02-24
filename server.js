@@ -1,7 +1,6 @@
 var http = require("http"),
     express = require("express"),
     path = require("path"),
-    ip = require("ip"),
     app = express(),
     lan,
     soft,
